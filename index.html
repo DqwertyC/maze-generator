@@ -7,13 +7,9 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <link rel="stylesheet" href="TemplateData/style.css" />
   </head>
-  <body style="background-color: #2b444c">
+  <body style="background-color: #2B444C">
     <div id="unity-container" class="unity-desktop">
-      <div class="parent">
-        <div class="child">
-          <canvas id="unity-canvas"></canvas>
-        </div>
-      </div>
+      <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -23,7 +19,7 @@
       <div id="unity-warning"></div>
     </div>
     <script>
-      //Prevent Ctrl+S 
+      //Prevent Ctrl+S
       document.onkeydown = function (e) {
         e = e || window.event; //Get event
 
@@ -104,13 +100,15 @@
       // performance, uncomment the following line:
       // config.devicePixelRatio = 1;
 
-      canvas.style = "width: 100%; height: 100%";
+      canvas.style =
+        "align-content: center; max-height: 100%;  max-width: 100%;  aspect-ratio: 5 / 6;  overflow: hidden;  margin: auto;  background: #12664c;";
       canvas.style.background =
         "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
 
       function resizeCanvas() {
-        canvas.style = "width: 100%; height: 100%";
+        canvas.style =
+          "align-content: center; max-height: 100%;  max-width: 100%;  aspect-ratio: 5 / 6;  overflow: hidden;  margin: auto;  background: #12664c;";
       }
 
       window.onresize = resizeCanvas;
